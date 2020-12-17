@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="utf-8">
+	<title>JS Oscilloscope - Sine Wave</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body onload="init(left,up,t,div,volt,second,frequency,divheight,divwidth)">
+	<h3>JS Oscilloscope - Sine Wave</h3>
+
+	<canvas id="canvas" width="500" height="500"></canvas>
+
+	<form>
+		<div class="form-group">
+			<label>Voltage</label>
+			<input type="range" id="voltage" min="1" max="220" step="1" value="10">
+			<output>10 V</output>
+		</div>
+		<div class="form-group">
+			<label>Frequency</label>
+			<input type="range" id="frequency" min="1" max="1000" step="1" value="250">
+			<output>250 Hz</output>
+		</div>
+		<div class="form-group">
+			<label>Seconds / div</label>
+			<input type="range" id="second-div" min="1" max="10" step="1" value="1">
+			<output>1 ms</output>
+		</div>
+		<div class="form-group">
+			<label>Volts / div</label>
+			<input type="range" id="volt-div" min="1" max="10" step="1" value="10">
+			<output>10 V</output>
+		</div>
+		<div class="form-group">
+			<label>Horizontal Offset</label>
+			<input type="range" id="horizontal-offset" min="0" max="100" step="1" value="50">
+			<output>50</output>
+		</div>
+		<div class="form-group">
+			<label>Vertical Offset</label>
+			<input type="range" id="vertical-offset" min="0" max="100" step="1" value="50">
+			<output>50</output>
+		</div>
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>
